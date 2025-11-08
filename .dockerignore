@@ -1,0 +1,43 @@
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# Build artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+license-service
+
+# Test files
+*_test.go
+**/*_test.go
+
+# Documentation
+*.md
+README.md
+
+# Database files (будем создавать в контейнере)
+storage/*.db
+storage/*.db-shm
+storage/*.db-wal
+
+# Environment files
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+

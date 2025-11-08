@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  license-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: license-service
+    ports:
+      - "8080:8080"
+    volumes:
+      # Монтируем директорию storage для сохранения базы данных
+      - ./storage:/app/storage
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - TZ=UTC
+
